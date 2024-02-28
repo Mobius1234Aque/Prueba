@@ -11,5 +11,5 @@ phases:
 
   build:
     commands:
-      - npm test
       - npm audit
+      - npm test

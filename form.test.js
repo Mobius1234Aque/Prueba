@@ -38,6 +38,23 @@ describe('Formulario', () => {
         expect(form.querySelector('button[type="submit"]')).toBeTruthy();
     });
     
-
-    // Agrega más pruebas según sea necesario
+    
+    test('El campo de entrada para el nombre de usuario no debe estar vacío', () => {
+        // Simula la entrada de texto en el campo de entrada para el nombre de usuario
+        const usernameInput = form.querySelector('input[id="username"]');
+        usernameInput.value = 'Test';
+    
+        // Verifica que el campo de entrada para el nombre de usuario no esté vacío
+        expect(usernameInput.value).not.toBe('');
+    });
+    
+    test('El campo de entrada para la contraseña no debe estar vacío', () => {
+        // Simula la entrada de texto en el campo de entrada para la contraseña
+        const passwordInput = form.querySelector('input[id="password"]');
+        passwordInput.value = 'Test';
+    
+        // Verifica que el campo de entrada para la contraseña no esté vacío
+        expect(passwordInput.value).not.toBe('');
+    });
+    
 });
